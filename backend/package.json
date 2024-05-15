@@ -5,7 +5,8 @@
     "author": "dolapo",
     "license": "MIT",
     "scripts": {
-        "dev": "nodemon"
+        "dev": "nodemon",
+        "build": "npm install && npx tsc"
     },
     "dependencies": {
         "cors": "^2.8.5",
