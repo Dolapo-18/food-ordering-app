@@ -12,6 +12,11 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string)
 app.use(express.json())
 app.use(cors())
 
+//health Check
+app.get('/health', (req: Request, res: Response) => {
+    res.send({message: "Health Ok!"})
+})
+
 app.use('/api/my/user', myUserRoute);
 
 app.listen(7001, () => {
